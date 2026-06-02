@@ -93,7 +93,7 @@ const tourismData = {
             weather: 'Extremely Cold, High Altitude',
             description: 'The highest paved international border crossing in the world (Pakistan-China Border).',
             attractions: ['Zero Point', 'World\'s Highest ATM', 'Snow Leopards', 'Khunjerab National Park'],
-            image: 'https://en.wikipedia.org/wiki/Khunjerab_Pass'
+            image: 'https://www.google.com/search?q=khunjerab+pass+picture&sca_esv=70aa846ced6b4820&rlz=1C1CHBF_en-GBPK1159PK1160&biw=1536&bih=695&sxsrf=ANbL-n48yNnszVycboAiO3G4N8lxr9csew%3A1780423030854&ei=dhkfar3rM5Hixc8Pw-yQMA&oq=Khunjerab+Pass+pict&gs_lp=Egxnd3Mtd2l6LXNlcnAiE0todW5qZXJhYiBQYXNzIHBpY3QqAggAMgYQABgWGB4yCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyBRAAGO8FMgUQABjvBUi5PFDqEliuMXADeAGQAQCYAb0CoAHXC6oBBzAuMS40LjG4AQHIAQD4AQL4AQGYAgmgAugMwgIKEAAYRxjWBBiwA8ICEBAAGIAEGIoFGEMYsQMYgwHCAhEQABiABBiKBRiRAhixAxiDAcICChAAGIAEGIoFGEPCAgUQABiABMICCxAAGIAEGIoFGJECmAMAiAYBkAYIkgcHMy4wLjUuMaAH6B2yBwUyLTUuMbgHvQzCBwMzLTnIB3WACAE&sclient=gws-wiz-serp#sv=CAMSZxowKg5rX3ZUN0xJbE05akE2TTIOa192VDdMSWxNOWpBNk06DlRGWjRlMkRJZk13cEtNIAQqLwobX3NSa2ZhcWo0THNPUDdOWVBxc2ZmbUEwXzQ0Eg5rX3ZUN0xJbE05akE2TRgAMAEYByCf0vfhDkoIEAEYASABKAE'
         }
     ],
     packages: [
