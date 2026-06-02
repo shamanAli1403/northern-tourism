@@ -1,0 +1,485 @@
+/* 
+    Explore Northern Pakistan - Global Styles
+    Theme: Nature-Inspired (Forest Greens, Glacial Blues, Earth Tones)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --primary-color: #2d5a27; /* Forest Green */
+    --secondary-color: #3a7ca5; /* Glacial Blue */
+    --accent-color: #d4a373; /* Earthy Sand */
+    --text-color: #2b2d42; /* Dark Slate */
+    --bg-color: #f8f9fa; /* Off-White */
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --grey-light: #e9ecef;
+    --grey-dark: #6c757d;
+    
+    /* Dark Mode Palette */
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-text: #e0e0e0;
+
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Shadow */
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Utility Classes */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #24481f;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    z-index: 1;
+}
+
+.slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.hero-content {
+    color: var(--white);
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px; /* Increased from 20px */
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 45px; /* Increased from 30px */
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+}
+
+.slider-nav span {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.slider-nav span:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* Leadership Section Styles */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition-fast);
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+}
+
+.team-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h3 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.team-info .role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.team-info .intro {
+    font-size: 0.9rem;
+    color: var(--grey-dark);
+}
+
+/* Owner Slide Specific Styles */
+.owner-slide {
+    display: flex;
+    align-items: center;
+}
+
+.owner-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px; /* Increased from 50px */
+    width: 100%;
+}
+
+.owner-info {
+    flex: 1;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.owner-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeInRight 1s ease forwards;
+}
+
+.owner-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 8px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.founder-tag {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 5px 20px; /* More horizontal padding */
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 25px; /* Increased from 15px */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.owner-info .role {
+    color: var(--accent-color);
+    font-size: 1.3rem; /* Slightly larger */
+    font-weight: 600;
+    margin-bottom: 30px; /* Increased from 20px */
+}
+
+.owner-intro {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 45px; /* Increased from 30px */
+    line-height: 1.6; /* Better line height */
+}
+
+/* Slide Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 992px) {
+    .owner-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .owner-image {
+        justify-content: center;
+    }
+    
+    .owner-image img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .owner-intro {
+        font-size: 1.1rem;
+    }
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navigation Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    transition: all var(--transition-fast);
+}
+
+header.scrolled {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 5px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    color: var(--white); /* White by default on hero */
+    transition: var(--transition-fast);
+}
+
+header.scrolled .logo {
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--white); /* White by default */
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+header.scrolled .nav-links a {
+    color: var(--text-color);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color) !important;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons i {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+}
+
+header.scrolled .nav-icons i {
+    color: var(--text-color);
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+header.scrolled .nav-toggle {
+    color: var(--text-color);
+}
+
+/* Specific "Book Now" in Nav */
+.nav-book-btn {
+    background-color: var(--accent-color);
+    color: var(--white) !important;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: var(--shadow);
+}
+
+.nav-book-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--grey-dark);
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+body.dark-mode header.scrolled {
+    background-color: var(--dark-surface);
+}
+
+body.dark-mode .logo {
+    color: var(--accent-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Mobile menu will be handled via JS */
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+}
