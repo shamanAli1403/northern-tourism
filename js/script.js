@@ -27,7 +27,7 @@ const tourismData = {
             weather: 'Cool Summers, Heavy Snow in Winter',
             description: 'The gateway to some of the world\'s highest peaks, including K2.',
             attractions: ['Shangrila Resort', 'Sheosar Lake', 'Deosai National Park', 'Katpana Desert'],
-            image: '/images/Skrdu.jpg'
+            image: '/images/Skardu.jpg'
         },
         {
             id: 'fairy-meadows',
