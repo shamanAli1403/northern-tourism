@@ -93,7 +93,7 @@ const tourismData = {
             weather: 'Extremely Cold, High Altitude',
             description: 'The highest paved international border crossing in the world (Pakistan-China Border).',
             attractions: ['Zero Point', 'World\'s Highest ATM', 'Snow Leopards', 'Khunjerab National Park'],
-            image: 'https://images.unsplash.com/photo-1627664819818-e147d6221422?auto=format&fit=crop&w=800&q=80'
+            image: 'https://rozefstourism.com/khunjerab-pass-opened/'
         }
     ],
     packages: [
