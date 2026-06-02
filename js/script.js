@@ -15,7 +15,7 @@ const tourismData = {
             weather: 'Mild Summers (15-25°C), Harsh Winters',
             description: 'A mountainous valley in the northern part of the Gilgit-Baltistan region of Pakistan.',
             attractions: ['Karimabad', 'Baltit Fort', 'Altit Fort', 'Attabad Lake', 'Passu Cones'],
-            image: 'https://www.pakvoyager.com/news/hunza-valley-travel-guide'
+            image: 'images/Hunza.jpg'
             
         },
         {
@@ -27,7 +27,7 @@ const tourismData = {
             weather: 'Cool Summers, Heavy Snow in Winter',
             description: 'The gateway to some of the world\'s highest peaks, including K2.',
             attractions: ['Shangrila Resort', 'Sheosar Lake', 'Deosai National Park', 'Katpana Desert'],
-            image: 'https://www.gettyimages.com/photos/skardu'
+            image: '/images/Skrdu.jpg'
         },
         {
             id: 'fairy-meadows',
@@ -60,7 +60,7 @@ const tourismData = {
             weather: 'Pleasant Summers, Snowy Winters',
             description: 'Known as the Switzerland of the East.',
             attractions: ['Malam Jabba', 'Kalam', 'Mahodand Lake', 'Fizagat Park'],
-            image: 'https://peacetourism.org/pakistan-swat-valley-from-terrorism-to-tourism-and-peace/'
+            image: '/images/Swat Valley.jpg'
         },
         {
             id: 'neelum',
@@ -71,7 +71,7 @@ const tourismData = {
             weather: 'Pleasant Summers, Heavy Snow in Winter',
             description: 'A 144km long bow-shaped valley in Azad Kashmir.',
             attractions: ['Kutton Waterfall', 'Keran', 'Upper Neelum', 'Sharda Peeth', 'Arang Kel'],
-            image: 'https://www.tripadvisor.com/Attraction_Review-g3576442-d17541339-Reviews-Neelum_Valley-Azad_Kashmir.html'
+            image: '/images/neelum.jpg'
         },
         {
             id: 'shogran',
@@ -93,7 +93,7 @@ const tourismData = {
             weather: 'Extremely Cold, High Altitude',
             description: 'The highest paved international border crossing in the world (Pakistan-China Border).',
             attractions: ['Zero Point', 'World\'s Highest ATM', 'Snow Leopards', 'Khunjerab National Park'],
-            image: 'https://rozefstourism.com/khunjerab-pass-opened/'
+            image: '/images/Khunjerab-Pass.png'
         }
     ],
     packages: [
