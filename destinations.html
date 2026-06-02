@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Destinations</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1582234033100-880053916960?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Our Destinations</h1>
+            <p>Explore the hidden gems of Northern Pakistan</p>
+        </div>
+    </section>
+
+    <!-- Search / Filter (Optional but good) -->
+    <section class="section-padding" style="padding-bottom: 20px;">
+        <div class="container">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <input type="text" id="dest-search" placeholder="Search for a destination (e.g., Hunza, Skardu)..." style="width: 100%; padding: 15px 25px; border-radius: 30px; border: 1px solid var(--grey-light); box-shadow: var(--shadow); font-size: 1rem;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="destinations-grid" class="destinations-list">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .destination-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+        .destination-row:nth-child(even) {
+            direction: rtl;
+        }
+        .destination-row:nth-child(even) .dest-content {
+            direction: ltr;
+        }
+        .dest-img img {
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .dest-info-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .pill {
+            background: var(--grey-light);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .destination-row {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .destination-row:nth-child(even) {
+                direction: ltr;
+            }
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('destinations-grid');
+            const searchInput = document.getElementById('dest-search');
+
+            function renderDestinations(filter = '') {
+                grid.innerHTML = '';
+                const filtered = tourismData.destinations.filter(d => 
+                    d.name.toLowerCase().includes(filter.toLowerCase()) || 
+                    d.description.toLowerCase().includes(filter.toLowerCase())
+                );
+
+                if (filtered.length === 0) {
+                    grid.innerHTML = '<p class="text-center">No destinations found matching your search.</p>';
+                    return;
+                }
+
+                filtered.forEach(dest => {
+                    const row = `
+                        <div class="destination-row" id="${dest.id}">
+                            <div class="dest-img">
+                                <img src="${dest.image}" alt="${dest.name}">
+                            </div>
+                            <div class="dest-content">
+                                <h2 style="color: var(--primary-color); margin-bottom: 15px;">${dest.name}</h2>
+                                <p>${dest.description}</p>
+                                <div class="dest-info-pills">
+                                    <span class="pill"><i class="fas fa-route"></i> ${dest.distance}</span>
+                                    <span class="pill"><i class="fas fa-clock"></i> ${dest.time}</span>
+                                    <span class="pill"><i class="fas fa-calendar-alt"></i> ${dest.season}</span>
+                                    <span class="pill"><i class="fas fa-cloud-sun"></i> ${dest.weather}</span>
+                                </div>
+                                <h4 style="margin-bottom: 10px;">Top Attractions:</h4>
+                                <ul style="margin-bottom: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 5px;">
+                                    ${dest.attractions.map(attr => `<li><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> ${attr}</li>`).join('')}
+                                </ul>
+                                <a href="register.html?dest=${dest.id}" class="btn btn-primary">Book This Trip</a>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += row;
+                });
+            }
+
+            renderDestinations();
+
+            searchInput.addEventListener('input', (e) => {
+                renderDestinations(e.target.value);
+            });
+        });
+    </script>
+</body>
+</html>

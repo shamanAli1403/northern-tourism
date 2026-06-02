@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Book Your Trip</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Start Your Adventure</h1>
+            <p>Register now for an unforgettable journey</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="booking-wrapper" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px;">
+                <!-- Form -->
+                <div style="background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow);">
+                    <form id="booking-form">
+                        <div class="form-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" id="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label>CNIC Number</label>
+                                <input type="text" id="cnic" required placeholder="xxxxx-xxxxxxx-x">
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email" required placeholder="example@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone" required placeholder="+92 xxxxxxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input type="text" id="city" required placeholder="Your City">
+                            </div>
+                            <div class="form-group">
+                                <label>Select Destination</label>
+                                <select id="destination" required>
+                                    <option value="">Choose Destination</option>
+                                    <!-- Populated via JS -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Package</label>
+                                <select id="package" required>
+                                    <option value="">Choose Package</option>
+                                    <!-- Populated via JS -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Number of Travelers</label>
+                                <input type="number" id="travelers" min="1" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Travel Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 30px;">
+                            <label>Special Requests / Notes</label>
+                            <textarea id="notes" rows="4" placeholder="Any specific requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Confirm Booking Request</button>
+                    </form>
+                </div>
+
+                <!-- Booking Summary / Calculator -->
+                <div style="background: var(--primary-color); color: var(--white); padding: 30px; border-radius: 15px; height: fit-content;">
+                    <h3 style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Cost Summary</h3>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <span>Base Package Rate:</span>
+                        <span id="summary-rate">Rs. 0</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <span>Travelers:</span>
+                        <span id="summary-travelers">1</span>
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+                    <div style="display: flex; justify-content: space-between; font-size: 1.5rem; font-weight: 700;">
+                        <span>Total Cost:</span>
+                        <span id="summary-total">Rs. 0</span>
+                    </div>
+                    <p style="font-size: 0.8rem; margin-top: 20px; color: rgba(255,255,255,0.7);">* Final cost may vary based on seasonal changes and specific hotel availability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content text-center">
+            <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+            <h2>Booking Request Received!</h2>
+            <p style="margin: 15px 0;">Thank you <span id="conf-name"></span>. Our agent will contact you shortly at <span id="conf-phone"></span> to finalize your trip to <span id="conf-dest"></span>.</p>
+            <button onclick="closeModal()" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; font-size: 0.9rem; }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid var(--grey-light); border-radius: 8px; font-family: inherit; }
+        
+        /* Modal Styles */
+        .modal { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+        .modal-content { background: var(--white); margin: 15% auto; padding: 40px; border-radius: 15px; max-width: 500px; box-shadow: var(--shadow); }
+        
+        @media (max-width: 992px) {
+            .booking-wrapper { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Tour Packages</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Tour Packages</h1>
+            <p>Choose the perfect plan for your mountain adventure</p>
+        </div>
+    </section>
+
+    <!-- Packages Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="packages-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding" style="background-color: var(--grey-light);">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 40px;">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: var(--white); padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: var(--shadow);">
+                    <h4 style="margin-bottom: 10px;">What is included in the package?</h4>
+                    <p>Our packages generally include hotel accommodation, dedicated transport with a driver, and daily breakfast. Luxury packages include all meals.</p>
+                </div>
+                <div style="background: var(--white); padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: var(--shadow);">
+                    <h4 style="margin-bottom: 10px;">Can we customize a package?</h4>
+                    <p>Yes! We offer fully customizable tours. Contact us via the form or WhatsApp for a tailor-made itinerary.</p>
+                </div>
+                <div style="background: var(--white); padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: var(--shadow);">
+                    <h4 style="margin-bottom: 10px;">Is fuel included?</h4>
+                    <p>For most private tours, fuel and toll charges are included in the package price. No hidden costs!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('packages-grid');
+
+            tourismData.packages.forEach(pack => {
+                const card = `
+                    <div class="package-card" style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); border-top: 5px solid var(--primary-color);">
+                        <div style="padding: 30px;">
+                            <h2 style="color: var(--primary-color); margin-bottom: 10px;">${pack.name}</h2>
+                            <p style="font-size: 2rem; font-weight: 700; color: var(--text-color);">Rs. ${pack.price.toLocaleString()} <span style="font-size: 0.9rem; font-weight: 400; color: var(--grey-dark);">/ person</span></p>
+                            <hr style="margin: 20px 0; border: 0; border-top: 1px solid var(--grey-light);">
+                            <ul style="margin-bottom: 30px;">
+                                <li style="margin-bottom: 12px;"><i class="fas fa-calendar-check" style="color: var(--secondary-color); width: 25px;"></i> <strong>Duration:</strong> ${pack.duration}</li>
+                                <li style="margin-bottom: 12px;"><i class="fas fa-bed" style="color: var(--secondary-color); width: 25px;"></i> <strong>Hotel:</strong> ${pack.hotel}</li>
+                                <li style="margin-bottom: 12px;"><i class="fas fa-shuttle-van" style="color: var(--secondary-color); width: 25px;"></i> <strong>Transport:</strong> ${pack.transport}</li>
+                                <li style="margin-bottom: 12px;"><i class="fas fa-utensils" style="color: var(--secondary-color); width: 25px;"></i> <strong>Meals:</strong> ${pack.meals.join(', ')}</li>
+                                <li style="margin-bottom: 12px;"><i class="fas fa-mountain" style="color: var(--secondary-color); width: 25px;"></i> <strong>Activities:</strong> ${pack.activities.join(', ')}</li>
+                            </ul>
+                            <a href="register.html?package=${pack.id}" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">Book This Package</a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+</html>

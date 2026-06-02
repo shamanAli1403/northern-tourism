@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Seasonal Rates</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Seasonal Rates</h1>
+            <p>Transparency in pricing across all seasons</p>
+        </div>
+    </section>
+
+    <!-- Seasonal Rates Tables -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="tabs" style="display: flex; justify-content: center; gap: 10px; margin-bottom: 40px;">
+                <button class="tab-btn active" onclick="showSeason('summer')">Summer (Peak)</button>
+                <button class="tab-btn" onclick="showSeason('winter')">Winter</button>
+                <button class="tab-btn" onclick="showSeason('spring')">Spring/Autumn</button>
+            </div>
+
+            <div id="summer" class="season-content active">
+                <h2 style="margin-bottom: 20px; color: var(--primary-color);">Summer Peak Season (June - August)</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Peak Rate (Rs.)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tour Package</td>
+                                <td>5-Day Explorer</td>
+                                <td>30,000</td>
+                                <td class="status-high">High Demand</td>
+                            </tr>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>Standard Double</td>
+                                <td>10,000</td>
+                                <td class="status-high">Limited</td>
+                            </tr>
+                            <tr>
+                                <td>Transport</td>
+                                <td>SUV / Prado</td>
+                                <td>18,000 / day</td>
+                                <td class="status-high">Pre-book Only</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="winter" class="season-content">
+                <h2 style="margin-bottom: 20px; color: var(--secondary-color);">Winter Season (November - March)</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Off-Peak Rate (Rs.)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tour Package</td>
+                                <td>5-Day Explorer</td>
+                                <td>22,000</td>
+                                <td class="status-low">Low Demand</td>
+                            </tr>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>Standard Double</td>
+                                <td>6,000</td>
+                                <td class="status-low">Available</td>
+                            </tr>
+                            <tr>
+                                <td>Transport</td>
+                                <td>SUV / Prado</td>
+                                <td>12,000 / day</td>
+                                <td class="status-low">Easy Access</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="spring" class="season-content">
+                <h2 style="margin-bottom: 20px; color: var(--accent-color);">Spring/Autumn (April-May, Sep-Oct)</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Type</th>
+                                <th>Standard Rate (Rs.)</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tour Package</td>
+                                <td>5-Day Explorer</td>
+                                <td>25,000</td>
+                                <td class="status-med">Moderate</td>
+                            </tr>
+                            <tr>
+                                <td>Hotels</td>
+                                <td>Standard Double</td>
+                                <td>8,000</td>
+                                <td class="status-med">Recommended</td>
+                            </tr>
+                            <tr>
+                                <td>Transport</td>
+                                <td>SUV / Prado</td>
+                                <td>15,000 / day</td>
+                                <td class="status-med">Available</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .tab-btn {
+            padding: 10px 25px;
+            border: 2px solid var(--grey-light);
+            background: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: var(--transition-fast);
+        }
+        .tab-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+        .season-content {
+            display: none;
+        }
+        .season-content.active {
+            display: block;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+        }
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--grey-light);
+        }
+        th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        .status-high { color: #d63031; font-weight: 700; }
+        .status-low { color: #00b894; font-weight: 700; }
+        .status-med { color: #0984e3; font-weight: 700; }
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        function showSeason(id) {
+            document.querySelectorAll('.season-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

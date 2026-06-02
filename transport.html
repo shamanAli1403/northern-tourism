@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Transport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Our Fleet</h1>
+            <p>Reliable and comfortable transport for your mountain journey</p>
+        </div>
+    </section>
+
+    <!-- Transport Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="transport-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+                <!-- Will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Renting Info -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: var(--white);">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 30px;">Important Rental Information</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; text-align: left;">
+                <div>
+                    <h4><i class="fas fa-info-circle"></i> Fuel Policy</h4>
+                    <p>Daily charges exclude fuel. Fuel consumption is calculated based on actual usage during the trip.</p>
+                </div>
+                <div>
+                    <h4><i class="fas fa-user-tie"></i> Driver Charges</h4>
+                    <p>Professional mountain-experienced drivers are included in the daily charges. Food and stay for the driver are the responsibility of the client.</p>
+                </div>
+                <div>
+                    <h4><i class="fas fa-clock"></i> Time Limit</h4>
+                    <p>Daily rental is for 12 hours. Extra hours may be charged additionally at a fixed rate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('transport-grid');
+
+            tourismData.transport.forEach(item => {
+                const card = `
+                    <div class="card" style="background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow);">
+                        <img src="${item.image}" alt="${item.type}" style="width: 100%; height: 250px; object-fit: cover;">
+                        <div style="padding: 25px;">
+                            <h3 style="color: var(--primary-color); margin-bottom: 15px;">${item.type}</h3>
+                            <ul style="margin-bottom: 20px;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-users" style="color: var(--secondary-color); width: 25px;"></i> <strong>Capacity:</strong> ${item.capacity}</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-money-bill-wave" style="color: var(--secondary-color); width: 25px;"></i> <strong>Daily Charges:</strong> Rs. ${item.charges}</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-user-check" style="color: var(--secondary-color); width: 25px;"></i> <strong>Driver:</strong> ${item.driver}</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-gas-pump" style="color: var(--secondary-color); width: 25px;"></i> <strong>Fuel:</strong> ${item.fuel}</li>
+                            </ul>
+                            <a href="register.html?transport=${encodeURIComponent(item.type)}" class="btn btn-primary" style="width: 100%; text-align: center;">Inquire Now</a>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+</html>

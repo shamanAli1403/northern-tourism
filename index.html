@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1581451433303-34e8f17f4175?auto=format&fit=crop&w=1400&q=80');">
+                <div class="hero-content container">
+                    <h1>Discover the Majesty of Hunza</h1>
+                    <p>Experience the "Shangri-La" of Pakistan with breathtaking views of Rakaposhi and Altit Fort.</p>
+                    <a href="destinations.html#hunza" class="btn btn-primary">Explore Hunza</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1582234033100-880053916960?auto=format&fit=crop&w=1400&q=80');">
+                <div class="hero-content container">
+                    <h1>The Giant Peaks of Skardu</h1>
+                    <p>Gateway to K2 and home to the mesmerizing Shangrila Resort and Deosai Plains.</p>
+                    <a href="destinations.html#skardu" class="btn btn-primary">Explore Skardu</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&w=1400&q=80');">
+                <div class="hero-content container">
+                    <h1>Saif-ul-Malook: A Fairy Tale Lake</h1>
+                    <p>Visit Naran Kaghan and witness the crystal clear waters where fairies are said to descend.</p>
+                    <a href="destinations.html#naran" class="btn btn-primary">Explore Naran</a>
+                </div>
+            </div>
+
+            <!-- Owner Slide: Shaman Ali -->
+            <div class="slide owner-slide" style="background-color: #1a2a1a;"> <!-- Dark forest theme -->
+                <div class="hero-content container">
+                    <div class="owner-flex">
+                        <div class="owner-info">
+                            <span class="founder-tag">The Visionary</span>
+                            <h1>Shaman Ali</h1>
+                            <p class="role">Founder & CEO</p>
+                            <p class="owner-intro">"My mission is to showcase the untamed beauty of Northern Pakistan to the world while preserving its natural heritage."</p>
+                            <a href="about.html" class="btn btn-primary">Our Story</a>
+                        </div>
+                        <div class="owner-image">
+                            <img src="images/Shaman Ali.png" alt="Shaman Ali">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Owner Slide: Shahzeb Ali -->
+            <div class="slide owner-slide" style="background-color: #1a232a;"> <!-- Dark glacial theme -->
+                <div class="hero-content container">
+                    <div class="owner-flex">
+                        <div class="owner-info">
+                            <span class="founder-tag">The Strategist</span>
+                            <h1>Shahzeb Ali</h1>
+                            <p class="role">Operations Manager</p>
+                            <p class="owner-intro">"Precision in logistics is what makes your mountain journey seamless and memorable. We handle the details, you enjoy the view."</p>
+                            <a href="about.html" class="btn btn-primary">Meet the Team</a>
+                        </div>
+                        <div class="owner-image">
+                            <img src="images/Shahzeb Ali.jpeg" alt="Shahzeb Ali">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Owner Slide: Hiba Rajab -->
+            <div class="slide owner-slide" style="background-color: #2a1f1a;"> <!-- Earthy autumn theme -->
+                <div class="hero-content container">
+                    <div class="owner-flex">
+                        <div class="owner-info">
+                            <span class="founder-tag">The Curator</span>
+                            <h1>Hiba Rajab</h1>
+                            <p class="role">Head of Customer Experience</p>
+                            <p class="owner-intro">"Every traveler has a unique story. I am here to ensure your journey to the North is as unique as you are."</p>
+                            <a href="about.html" class="btn btn-primary">Our Experience</a>
+                        </div>
+                        <div class="owner-image">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Hiba Rajab">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <div class="slider-nav">
+                <span class="prev"><i class="fas fa-chevron-left"></i></span>
+                <span class="next"><i class="fas fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 20px;">Welcome to the Roof of the World</h2>
+            <p style="max-width: 800px; margin: 0 auto 40px;">Northern Pakistan is a land of unmatched beauty, where the Himalayas, Karakoram, and Hindu Kush mountain ranges meet. From lush green valleys to glacial lakes and ancient forts, we offer curated tours that promise memories for a lifetime.</p>
+            <div class="features-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h3>Safe Travels</h3>
+                    <p>Verified drivers and local guides to ensure your safety throughout the journey.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hotel" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h3>Best Hotels</h3>
+                    <p>Hand-picked accommodations ranging from budget-friendly to luxury resorts.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-map-marked-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
+                    <h3>Custom Tours</h3>
+                    <p>Tailor-made packages designed to fit your preferences and budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations (Dynamic placeholder) -->
+    <section class="section-padding" style="background-color: var(--grey-light);">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 40px;">Featured Destinations</h2>
+            <div id="featured-destinations" class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Will be populated via script.js -->
+            </div>
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="destinations.html" class="btn btn-primary">View All Destinations</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Packages -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="text-center" style="margin-bottom: 40px;">Popular Tour Packages</h2>
+            <div id="popular-packages" class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <!-- Will be populated via script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding" style="background-color: var(--primary-color); color: var(--white);">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 40px;">What Our Travelers Say</h2>
+            <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px;">
+                    <p>"The 7-day Hunza tour was magical. The organization was top-notch and the guide was very knowledgeable."</p>
+                    <h4 style="margin-top: 15px;">- Ahmed Khan</h4>
+                </div>
+                <div class="testimonial-card" style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px;">
+                    <p>"Best experience ever! Skardu is a paradise and Explore North made it so easy for us."</p>
+                    <h4 style="margin-top: 15px;">- Sarah J.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+    <script>
+        // Populate featured destinations and packages on home page
+        document.addEventListener('DOMContentLoaded', () => {
+            const destContainer = document.getElementById('featured-destinations');
+            const packContainer = document.getElementById('popular-packages');
+
+            // Render 3 Featured Destinations
+            tourismData.destinations.slice(0, 3).forEach(dest => {
+                const card = `
+                    <div class="card" style="background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);">
+                        <img src="${dest.image}" alt="${dest.name}" style="width: 100%; hieght: 200px; object-fit: cover;">
+                        <div style="padding: 20px;">
+                            <h3>${dest.name}</h3>
+                            <p style="font-size: 0.9rem; color: var(--grey-dark); margin: 10px 0;">${dest.description.substring(0, 80)}...</p>
+                            <a href="destinations.html#${dest.id}" style="color: var(--primary-color); font-weight: 600;">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                `;
+                destContainer.innerHTML += card;
+            });
+
+            // Render 4 Popular Packages
+            tourismData.packages.forEach(pack => {
+                const card = `
+                    <div class="card" style="background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid var(--grey-light); padding: 25px; transition: var(--transition-fast);">
+                        <h3 style="color: var(--primary-color);">${pack.name}</h3>
+                        <p style="font-size: 1.5rem; font-weight: 700; margin: 15px 0;">Rs. ${pack.price.toLocaleString()}</p>
+                        <ul style="margin-bottom: 20px;">
+                            <li><i class="fas fa-clock"></i> ${pack.duration}</li>
+                            <li><i class="fas fa-hotel"></i> ${pack.hotel} Hotel</li>
+                            <li><i class="fas fa-car"></i> ${pack.transport}</li>
+                        </ul>
+                        <a href="register.html?package=${pack.id}" class="btn btn-primary" style="width: 100%; text-align: center;">Select Package</a>
+                    </div>
+                `;
+                packContainer.innerHTML += card;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Northern Pakistan | Hotels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo"><i class="fas fa-mountain"></i> EXPLORE NORTH</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="rates.html">Rates</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <i class="fas fa-moon" onclick="toggleDarkMode()" style="cursor: pointer;"></i>
+                    <a href="register.html" class="nav-book-btn">Book Now</a>
+                </div>
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+        <div class="container">
+            <h1>Accommodation</h1>
+            <p>From cozy guest houses to world-class luxury resorts</p>
+        </div>
+    </section>
+
+    <!-- Hotel Sections -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="margin-bottom: 30px; border-left: 5px solid var(--accent-color); padding-left: 15px;">Budget Hotels</h2>
+            <div id="budget-hotels" class="hotel-grid"></div>
+
+            <h2 style="margin: 60px 0 30px; border-left: 5px solid var(--secondary-color); padding-left: 15px;">Standard Hotels</h2>
+            <div id="standard-hotels" class="hotel-grid"></div>
+
+            <h2 style="margin: 60px 0 30px; border-left: 5px solid var(--primary-color); padding-left: 15px;">Luxury Hotels & Resorts</h2>
+            <div id="luxury-hotels" class="hotel-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="logo" style="color: var(--white);"><i class="fas fa-mountain"></i> EXPLORE NORTH</h4>
+                    <p>Your ultimate guide to Northern Pakistan. We provide seamless travel experiences across the mountain ranges.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="https://wa.me/923019413918" target="_blank" style="color: #25D366;"><i class="fab fa-whatsapp"></i> 03019413918 (WhatsApp)</a></li>
+                        <li><a href="tel:03019413918"><i class="fas fa-phone"></i> Call: 03019413918</a></li>
+                        <li><a href="mailto:shamanali1403@gmail.com"><i class="fas fa-envelope"></i> shamanali1403@gmail.com</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Teen+Talwar+Karachi" target="_blank"><i class="fas fa-map-marker-alt"></i> Head Office: Teen Talwar, Karachi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Explore Northern Pakistan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .hotel-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition-fast);
+        }
+        .hotel-card:hover {
+            transform: translateY(-5px);
+        }
+        .hotel-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        .hotel-body {
+            padding: 20px;
+        }
+        .hotel-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .facility-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 15px 0;
+        }
+        .facility-tag {
+            font-size: 0.75rem;
+            background: var(--grey-light);
+            padding: 2px 10px;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const containers = {
+                'Budget': document.getElementById('budget-hotels'),
+                'Standard': document.getElementById('standard-hotels'),
+                'Luxury': document.getElementById('luxury-hotels')
+            };
+
+            tourismData.hotels.forEach(hotel => {
+                const card = `
+                    <div class="hotel-card">
+                        <img src="${hotel.image}" alt="${hotel.name}" class="hotel-img">
+                        <div class="hotel-body">
+                            <h3>${hotel.name}</h3>
+                            <p style="color: var(--grey-dark); font-size: 0.9rem;"><i class="fas fa-map-marker-alt"></i> ${hotel.location}</p>
+                            <div class="facility-list">
+                                ${hotel.facilities.map(f => `<span class="facility-tag">${f}</span>`).join('')}
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 15px;">
+                                <span class="hotel-price">Rs. ${hotel.price} <small style="font-weight: 400; font-size: 0.8rem; color: var(--grey-dark);">/ night</small></span>
+                                <a href="register.html?hotel=${encodeURIComponent(hotel.name)}" class="btn btn-primary" style="padding: 5px 15px; font-size: 0.8rem;">Book Room</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                if (containers[hotel.category]) {
+                    containers[hotel.category].innerHTML += card;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
