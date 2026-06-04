@@ -100,7 +100,7 @@ const tourismData = {
             weather: 'Extremely Cold, High Altitude',
             description: 'The highest paved international border crossing in the world (Pakistan-China Border).',
             attractions: ['Zero Point', 'World\'s Highest ATM', 'Snow Leopards', 'Khunjerab National Park'],
-            image: 'images/khunjerab-Pass.png'
+            image: 'images/Khunjerab-Pass.png'
         }
     ],
     packages: [
