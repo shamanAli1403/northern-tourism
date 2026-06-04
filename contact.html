@@ -44,7 +44,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section-padding">
+    <section class="contact-section-wide">
         <div class="container">
             <div class="contact-wrapper">
                 <!-- Contact Info -->
@@ -163,6 +163,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 50px;
+            padding: 40px 0; /* Extra internal vertical space */
         }
 
         .contact-form-container {
@@ -172,10 +173,18 @@
             box-shadow: var(--shadow);
         }
 
+        .contact-section-wide {
+            padding: 100px 0; /* Generous top and bottom space */
+        }
+
         @media (max-width: 992px) {
+            .contact-section-wide {
+                padding: 60px 0;
+            }
             .contact-wrapper {
                 grid-template-columns: 1fr;
                 gap: 40px;
+                padding: 20px 0;
             }
             .contact-form-container {
                 padding: 30px 20px;
