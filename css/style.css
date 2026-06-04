@@ -332,7 +332,6 @@ header {
     width: 100%;
     z-index: 1000;
     background-color: transparent;
-    transition: all var(--transition-fast);
 }
 
 header.scrolled {
@@ -351,7 +350,6 @@ nav {
 .logo {
     font-size: 1.6rem;
     color: var(--white); /* White by default on hero */
-    transition: var(--transition-fast);
 }
 
 header.scrolled .logo {
@@ -381,12 +379,12 @@ header.scrolled .nav-links a {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-left: 40px; /* Space between Links and Icons */
 }
 
 .nav-icons i {
     color: var(--white);
     font-size: 1.2rem;
-    transition: var(--transition-fast);
 }
 
 header.scrolled .nav-icons i {
@@ -398,25 +396,45 @@ header.scrolled .nav-icons i {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--white);
+    margin-left: 25px; /* Added space between icons and toggle */
 }
 
 header.scrolled .nav-toggle {
     color: var(--text-color);
 }
 
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none; /* Mobile menu will be handled via JS */
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+}
+
 /* Specific "Book Now" in Nav */
 .nav-book-btn {
-    background-color: var(--accent-color);
+    background-color: transparent;
     color: var(--white) !important;
-    padding: 10px 25px;
+    border: 2px solid var(--white);
+    padding: 8px 25px;
     border-radius: 30px;
     font-weight: 700;
-    box-shadow: var(--shadow);
+    transition: all var(--transition-fast);
+}
+
+header.scrolled .nav-book-btn {
+    color: var(--accent-color) !important;
+    border-color: var(--accent-color);
 }
 
 .nav-book-btn:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    color: var(--white) !important;
+    transform: scale(1.05);
 }
 
 /* Footer Styles */
@@ -473,13 +491,251 @@ body.dark-mode .logo {
     color: var(--accent-color);
 }
 
-/* Responsive Adjustments */
+/* Page Header Utility */
+.page-header {
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    text-align: center;
+    margin-top: 70px;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Card Utility */
+.card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+/* Responsive Grid Utility */
+.responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Table Responsiveness */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey-light);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 600;
+}
+
+/* Responsive Grid Utility */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Base Responsive Breakpoints */
+
+/* Extra Large Devices (Large Desktop) */
+@media (max-width: 1400px) {
+    .container { max-width: 1140px; }
+}
+
+/* Large Devices (Desktops, 992px and down) */
 @media (max-width: 992px) {
-    .nav-links {
-        display: none; /* Mobile menu will be handled via JS */
+    .container { max-width: 960px; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    
+    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+
+    /* For registration/booking wrapper */
+    .booking-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Medium Devices (Tablets, 768px and down) */
+@media (max-width: 768px) {
+    .container { max-width: 720px; }
+    .section-padding { padding: 60px 0; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    
+    .owner-flex {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    .owner-image img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Small Devices (Mobile, 576px and down) */
+@media (max-width: 576px) {
+    .container { padding: 0 15px; }
+    
+    /* Hero "Card" Redesign */
+    .hero {
+        height: 85vh;
+        background-color: var(--grey-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .slider-container {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        position: relative;
+    }
+
+    .slide {
+        width: calc(100% - 40px) !important;
+        height: calc(100% - 40px) !important;
+        top: 20px !important;
+        left: 20px !important;
+        border-radius: 30px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        border: 3px solid var(--white);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        padding: 40px 25px; /* Increased top/bottom padding */
+        text-align: center;
+        background: linear-gradient(transparent, rgba(0,0,0,0.85));
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        margin-top: auto; /* Push from top */
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+        line-height: 1.4;
+    }
+
+    .btn { 
+        width: 100%; 
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        margin-bottom: 60px; /* Leave room for slider nav */
     }
     
-    .nav-toggle {
-        display: block;
+    /* Owner Card Specifics */
+    .owner-flex {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        height: 100%;
+    }
+
+    .owner-image {
+        order: -1;
+        margin-top: 20px; /* Top space for image */
+    }
+
+    .owner-image img {
+        width: 130px;
+        height: 130px;
+        border-width: 4px;
+    }
+
+    .founder-tag {
+        margin-bottom: 10px;
+        padding: 3px 12px;
+        font-size: 0.7rem;
+    }
+
+    .owner-info .role {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .owner-intro {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+
+    /* Adjusted Controls for Card Layout */
+    .slider-nav {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 25px; /* Moved closer to bottom */
+        gap: 60px; /* Wider gap to clear center button area */
+        width: 100%;
+        justify-content: center;
+    }
+
+    .slider-nav span {
+        width: 45px;
+        height: 45px;
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(5px);
     }
 }
