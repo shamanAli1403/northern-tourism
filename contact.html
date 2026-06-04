@@ -46,9 +46,9 @@
     <!-- Contact Section -->
     <section class="section-padding">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px;">
+            <div class="contact-wrapper">
                 <!-- Contact Info -->
-                <div>
+                <div class="contact-info">
                     <h2 style="color: var(--primary-color); margin-bottom: 20px;">Get in Touch</h2>
                     <p style="margin-bottom: 30px;">Have questions about our packages or need a custom itinerary? Reach out to us through any of the following channels.</p>
                     
@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div style="background: var(--white); padding: 40px; border-radius: 15px; box-shadow: var(--shadow);">
+                <div class="contact-form-container">
                     <form id="contact-form">
                         <div class="form-group" style="margin-bottom: 20px;">
                             <label>Name</label>
@@ -158,6 +158,29 @@
     <style>
         .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
         input, textarea { width: 100%; padding: 12px; border: 1px solid var(--grey-light); border-radius: 8px; font-family: inherit; }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        @media (max-width: 992px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+        }
     </style>
 
     <!-- Scripts -->
