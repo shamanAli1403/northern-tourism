@@ -16,7 +16,7 @@ const tourismData = {
             weather: 'Mild Summers (15-25°C), Harsh Winters',
             description: 'A mountainous valley in the northern part of the Gilgit-Baltistan region of Pakistan.',
             attractions: ['Karimabad', 'Baltit Fort', 'Altit Fort', 'Attabad Lake', 'Passu Cones'],
-            image: 'images/hunza.jpg'
+            image: 'images/Hunza.jpg'
         },
         {
             id: 'skardu',
@@ -28,7 +28,7 @@ const tourismData = {
             weather: 'Cool Summers, Heavy Snow in Winter',
             description: 'The gateway to some of the world\'s highest peaks, including K2.',
             attractions: ['Shangrila Resort', 'Sheosar Lake', 'Deosai National Park', 'Katpana Desert'],
-            image: 'images/skardu.jpg'
+            image: 'images/Skardu.jpg'
         },
         {
             id: 'fairy-meadows',
