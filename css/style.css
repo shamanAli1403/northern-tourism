@@ -498,7 +498,7 @@ body.dark-mode .logo {
     background-position: center;
     color: var(--white);
     text-align: center;
-    margin-top: 70px;
+    margin-top: 80px; /* Increased from 70px to clear header better */
 }
 
 .page-header h1 {
