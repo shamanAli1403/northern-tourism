@@ -108,7 +108,7 @@
                             <a href="about.html" class="btn btn-primary">Our Experience</a>
                         </div>
                         <div class="owner-image">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Hiba Rajab">
+                            <img src="images/Hiba.jpeg" alt="Hiba Rajab">
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
     <section class="section-padding" style="background-color: var(--grey-light);">
         <div class="container">
             <h2 class="text-center" style="margin-bottom: 40px;">Featured Destinations</h2>
-            <div id="featured-destinations" class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div id="featured-destinations" class="responsive-grid">
                 <!-- Will be populated via script.js -->
             </div>
             <div class="text-center" style="margin-top: 40px;">
@@ -164,7 +164,7 @@
     <section class="section-padding">
         <div class="container">
             <h2 class="text-center" style="margin-bottom: 40px;">Popular Tour Packages</h2>
-            <div id="popular-packages" class="card-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <div id="popular-packages" class="responsive-grid">
                 <!-- Will be populated via script.js -->
             </div>
         </div>
@@ -240,9 +240,9 @@
             // Render 3 Featured Destinations
             tourismData.destinations.slice(0, 3).forEach(dest => {
                 const card = `
-                    <div class="card" style="background: var(--white); border-radius: 10px; overflow: hidden; box-shadow: var(--shadow);">
-                        <img src="${dest.image}" alt="${dest.name}" style="width: 100%; hieght: 200px; object-fit: cover;">
-                        <div style="padding: 20px;">
+                    <div class="card">
+                        <img src="${dest.image}" alt="${dest.name}" class="card-img">
+                        <div class="card-body">
                             <h3>${dest.name}</h3>
                             <p style="font-size: 0.9rem; color: var(--grey-dark); margin: 10px 0;">${dest.description.substring(0, 80)}...</p>
                             <a href="destinations.html#${dest.id}" style="color: var(--primary-color); font-weight: 600;">Learn More <i class="fas fa-arrow-right"></i></a>
@@ -255,7 +255,7 @@
             // Render 4 Popular Packages
             tourismData.packages.forEach(pack => {
                 const card = `
-                    <div class="card" style="background: var(--white); border-radius: 10px; overflow: hidden; border: 1px solid var(--grey-light); padding: 25px; transition: var(--transition-fast);">
+                    <div class="card" style="padding: 25px;">
                         <h3 style="color: var(--primary-color);">${pack.name}</h3>
                         <p style="font-size: 1.5rem; font-weight: 700; margin: 15px 0;">Rs. ${pack.price.toLocaleString()}</p>
                         <ul style="margin-bottom: 20px;">

@@ -56,8 +56,8 @@
                                 <input type="text" id="name" required placeholder="Enter your full name">
                             </div>
                             <div class="form-group">
-                                <label>CNIC Number</label>
-                                <input type="text" id="cnic" required placeholder="xxxxx-xxxxxxx-x">
+                                <label>CNIC / Passport Number</label>
+                                <input type="text" id="cnic" required placeholder="CNIC or Passport Number">
                             </div>
                             <div class="form-group">
                                 <label>Email Address</label>
@@ -68,8 +68,11 @@
                                 <input type="tel" id="phone" required placeholder="+92 xxxxxxxxx">
                             </div>
                             <div class="form-group">
-                                <label>City</label>
-                                <input type="text" id="city" required placeholder="Your City">
+                                <label>Pick-up City</label>
+                                <select id="starting-city" required>
+                                    <option value="">Choose City</option>
+                                    <!-- Populated via JS -->
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label>Select Destination</label>
@@ -82,6 +85,13 @@
                                 <label>Select Package</label>
                                 <select id="package" required>
                                     <option value="">Choose Package</option>
+                                    <!-- Populated via JS -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Select Transport Type</label>
+                                <select id="transport" required>
+                                    <option value="">Choose Transport</option>
                                     <!-- Populated via JS -->
                                 </select>
                             </div>
@@ -106,12 +116,20 @@
                 <div style="background: var(--primary-color); color: var(--white); padding: 30px; border-radius: 15px; height: fit-content;">
                     <h3 style="margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 10px;">Cost Summary</h3>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <span>Base Package Rate:</span>
+                        <span>Stay Cost (p/p):</span>
                         <span id="summary-rate">Rs. 0</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                         <span>Travelers:</span>
                         <span id="summary-travelers">1</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <span>Round Trip Dist:</span>
+                        <span id="summary-distance">0 km</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                        <span>Transport Cost:</span>
+                        <span id="summary-transport">Rs. 0</span>
                     </div>
                     <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
                     <div style="display: flex; justify-content: space-between; font-size: 1.5rem; font-weight: 700;">

@@ -36,7 +36,7 @@
     </header>
 
     <!-- Page Header -->
-    <section class="section-padding" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80'); background-size: cover; background-position: center; color: var(--white); text-align: center; margin-top: 70px;">
+    <section class="page-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80');">
         <div class="container">
             <h1>Seasonal Rates</h1>
             <p>Transparency in pricing across all seasons</p>
@@ -54,7 +54,7 @@
 
             <div id="summer" class="season-content active">
                 <h2 style="margin-bottom: 20px; color: var(--primary-color);">Summer Peak Season (June - August)</h2>
-                <div class="table-container">
+                <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
@@ -90,7 +90,7 @@
 
             <div id="winter" class="season-content">
                 <h2 style="margin-bottom: 20px; color: var(--secondary-color);">Winter Season (November - March)</h2>
-                <div class="table-container">
+                <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
@@ -126,7 +126,7 @@
 
             <div id="spring" class="season-content">
                 <h2 style="margin-bottom: 20px; color: var(--accent-color);">Spring/Autumn (April-May, Sep-Oct)</h2>
-                <div class="table-container">
+                <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
@@ -223,26 +223,6 @@
         }
         .season-content.active {
             display: block;
-        }
-        .table-container {
-            overflow-x: auto;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--white);
-        }
-        th, td {
-            padding: 20px;
-            text-align: left;
-            border-bottom: 1px solid var(--grey-light);
-        }
-        th {
-            background-color: var(--primary-color);
-            color: var(--white);
         }
         .status-high { color: #d63031; font-weight: 700; }
         .status-low { color: #00b894; font-weight: 700; }
